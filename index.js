@@ -1,6 +1,6 @@
 import express from "express"
 import mongoose from "mongoose"
-const methodOverriade = require("method-override")
+import methodOverriade from "method-override"
 
 const app = express()
 app.use(methodOverriade("_method"))
