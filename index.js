@@ -3,7 +3,11 @@ import mongoose from "mongoose"
 import methodOverriade from "method-override"
 
 const app = express()
+
 app.use(methodOverriade("_method"))
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 
 
 const port = process.env.PORT || 5000
