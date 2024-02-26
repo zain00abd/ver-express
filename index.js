@@ -4,7 +4,7 @@ import mongoose from "mongoose"
 const app = express()
 
 app.get('/', (req,res) =>{
-    res.send("hello zain")
+    res.send("hello zain1")
 })
 
 mongoose.connect("mongodb+srv://zaindiv:SK7A2fOZbLeJ08Ix@cluster0.32r5dqe.mongodb.net/all-data?retryWrites=true&w=majority")
