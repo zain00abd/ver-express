@@ -1,18 +1,16 @@
-const mongoose = require("mongoose")
-const Schema = mongoose.Schema
+
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
 const ModelSchema = new Schema({
-    name:String,
-    addres:String,
-    phone:String,
-    invoicesprice:Number,
-    invoicespay:Number,
-    latsarr:Number,
-    arrinvoce:[Object],
+    name: String,
+    address: String,
+    phone: String,
+    invoicesPrice: Number,
+    invoicesPay: Number,
+    lastArr: Number,
+    arrInvoice: [{ type: Schema.Types.Mixed }],
+  });
 
-
-
-})
-
-const data = mongoose.model("invoce",ModelSchema)
-module.exports = data
+const InvoiceModel = mongoose.model('Invoice', ModelSchema);
+export default InvoiceModel;
