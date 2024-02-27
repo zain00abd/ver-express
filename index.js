@@ -15,15 +15,15 @@ const port = process.env.PORT || 5000;
 const dbUri = process.env.MONGODB_URI; // Use an environment variable for your MongoDB URI
 
 app.get('/', (req, res) => {
-    InvoiceModel.find()
-        .then((result) => {
-            res.render("index", { arr: result });
-            console.log(result);
-        })
-        .catch((error) => {
-            console.error(error);
-            res.status(500).send("An error occurred");
-        });
+    console.log("result sfdfsd");
+    // InvoiceModel.find()
+    //     .then((result) => {
+    //         res.render("index", { arr: result });
+    //     })
+    //     .catch((error) => {
+    //         console.error(error);
+    //         res.status(500).send("An error occurred");
+    //     });
 });
 
 mongoose.connect("mongodb+srv://zaindiv:SK7A2fOZbLeJ08Ix@cluster0.32r5dqe.mongodb.net/all-data?retryWrites=true&w=majority") // Use the environment variable here
