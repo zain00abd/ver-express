@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 mongoose.connect("mongodb+srv://zaindiv:SK7A2fOZbLeJ08Ix@cluster0.32r5dqe.mongodb.net/all-data?retryWrites=true&w=majority") // Use the environment variable here
 .then(() => {
     app.listen(port, () => {
-        console.log(`Server is running at http://localhost:${port}/`);
+        console.log(`http://localhost:${port}/`);
     });
 })
 .catch((error) => {
